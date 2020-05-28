@@ -13,6 +13,7 @@ def home():
 def predict():
     url = request.form['url']
     data = pd.read_csv(url)
+    backup = data
     data = data.drop('Attended',axis=1)
     dummy = pd.get_dummies(data.Question_Type)
     data = pd.concat([data,dummy],axis='columns')
@@ -22,10 +23,15 @@ def predict():
     x = data.drop('Question_Difficulty',axis = 1)
     y = data['Question_Difficulty']
     train,test,train_label,test_label = train_test_split(x,y,random_state = 0)
-    dtc = DecisionTreeClassifier(max_depth=2)
-    dtc.fit(train,train_label)
-    score = dtc.score(test,test_label)
-    return render_template('predict.html',url = score)
+    # dtc = DecisionTreeClassifier(max_depth=2)
+    # dtc.fit(train,train_label)
+    # score = dtc.score(test,test_label)
+    score = model.score(x,y)
+    pre = model.predict(x)
+    pr = list(le.inverse_transform(pre))
+    backup['Predicted'] = pr
+    #print(pr)
+    return render_template('predict.html',score = score,url = url,tables=[backup.to_html(classes='data')],titles=backup.columns.values)
     
 
 if __name__ == "__main__":
