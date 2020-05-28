@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Home</title>
 </head>
 <body>
-    <h1>Page Loaded</h1>
+    <div style="text-align :  center ; height: 50; ">
     <form action="{{ url_for('predict')}}" method="post">
-        <input type="text" name="url">
+        <input type="url" name="url" placeholder="File URL" required="required" >
         <button type="submit">Predict</button>
     </form>
+    </div>
 </body>
 </html>
