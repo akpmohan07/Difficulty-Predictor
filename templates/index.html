@@ -7,14 +7,20 @@
     <title>Home</title>
 </head>
 <body>
+    <a href="https://github.com/akpmohan07/Difficulty-Predictor"><h1 style="float: right; color: black;">Github</h1></a>
+
     <div class="center"  >
     <form action="{{ url_for('predict')}}" method="post" action="">
-        <div class=file>
+        <div class="center">
+        <label for="url">URL</label>
         <input type="url" name="url" placeholder="File URL"  > 
         <button type="submit" name="action" value="file">Predict</button>
         </div>
         <h1 style="text-align: center;">OR</h1>
         <br>
+
+        <div class="center">
+        <label for="QT">QuestionType</label>
         <select  name="QT" >
             <option value="none" selected disabled hidden> Question Type </option> 
             <option value="MCQ">MCQ</option>
@@ -22,13 +28,20 @@
             <option value="Match">Match</option>
             <option value="Program">Program</option>
         </select><br>
-        <input type="number"  name="TT" placeholder="Time Taken">
+        <label for="TT">Time Taken</label>
+        <input type="number"  name="TT" placeholder="Time Taken"><br>
+        <label for="S">Submission</label>
         <input type="number" name="S" placeholder="Submission"><br>
-        <input type="number" name="HU" placeholder="Hints Used">
+        <label for="HU">Hints Used</label>
+        <input type="number" name="HU" placeholder="Hints Used"><br>
+        <label for="R">Right</label>
         <input type="number" name="R" placeholder="Right"><br>
-        <input type="number" name="P" placeholder="Partial">
+        <label for="P">Partial</label>
+        <input type="number" name="P" placeholder="Partial"><br>
+        <label for="W">Wrong</label>
         <input type="number" name="W" placeholder="Wrong"><br>
         <button type="submit" name="action" value="form">Predict</button>
+    </div>
     </form>
     </div>
 </body>

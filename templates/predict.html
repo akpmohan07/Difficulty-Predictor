@@ -8,13 +8,14 @@
 </head>
 <body>
    
-    <div class="table_entrances" style="overflow-x: auto;">
+    
 
        
         
         {% for table in tables %}
         {{ table|safe }}
          {% endfor %}
+
 
          {% if level =='Easy'%}
             <h1 style="  text-shadow: 2px 2px 5px red;font-size: 60px; color: green; text-align: center; vertical-align: middle;" >Easy😃</h1>
