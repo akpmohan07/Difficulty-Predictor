@@ -8,9 +8,27 @@
 </head>
 <body>
     <div class="center"  >
-    <form action="{{ url_for('predict')}}" method="post">
-        <input type="url" name="url" placeholder="File URL" required="required" >
-        <button type="submit">Predict</button>
+    <form action="{{ url_for('predict')}}" method="post" action="">
+        <div class=file>
+        <input type="url" name="url" placeholder="File URL"  > 
+        <button type="submit" name="action" value="file">Predict</button>
+        </div>
+        <h1 style="text-align: center;">OR</h1>
+        <br>
+        <select  name="QT" >
+            <option value="none" selected disabled hidden> Question Type </option> 
+            <option value="MCQ">MCQ</option>
+            <option value="FillUp">FillUp</option>
+            <option value="Match">Match</option>
+            <option value="Program">Program</option>
+        </select><br>
+        <input type="number"  name="TT" placeholder="Time Taken">
+        <input type="number" name="S" placeholder="Submission"><br>
+        <input type="number" name="HU" placeholder="Hints Used">
+        <input type="number" name="R" placeholder="Right"><br>
+        <input type="number" name="P" placeholder="Partial">
+        <input type="number" name="W" placeholder="Wrong"><br>
+        <button type="submit" name="action" value="form">Predict</button>
     </form>
     </div>
 </body>
