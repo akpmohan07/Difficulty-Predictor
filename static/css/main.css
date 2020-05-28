@@ -35,3 +35,12 @@ td, th {
       margin: 10px;
       padding-left: 30px;
   }
+  .easy h1{
+      color: green;
+  }
+  .medium{
+      color: orange;
+  }
+  .hard{
+      color: red;
+  }
