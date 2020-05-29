@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 import pickle
 import pandas as pd
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('dtc_model.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -21,20 +21,23 @@ def predict():
         data = pd.concat([data,dummy],axis='columns')
         data = data.drop('Question_Type',axis = 'columns')
         le = LabelEncoder()
-        data.Question_Difficulty = le.fit_transform(data.Question_Difficulty)
-        x = data.drop('Question_Difficulty',axis = 1)
-        y = data['Question_Difficulty']
-        train,test,train_label,test_label = train_test_split(x,y,random_state = 0)
+        label = le.fit_transform(['Easy','Medium','Hard'])
+        try:
+            x = data.drop('Question_Difficulty',axis = 1)
+        except:
+            x = data
+
+        #y = data['Question_Difficulty']
+        #train,test,train_label,test_label = train_test_split(x,y,random_state = 0)
         # dtc = DecisionTreeClassifier(max_depth=2)
         # dtc.fit(train,train_label)
         # score = dtc.score(test,test_label)
-        print(type(train))
         #print(x)
-        score = model.score(x,y)
+        #score = model.score(x,y)
         pre = model.predict(x)
         pr = list(le.inverse_transform(pre))
         backup['Predicted'] = pr
-        return render_template('predict.html',score = score,url = url,tables=[backup.to_html(classes='data')],titles=backup.columns.values)
+        return render_template('predict.html',url = url,tables=[backup.to_html(classes='data')],titles=backup.columns.values)
     elif request.form['action'] == 'form':
         data = []
         data.append(request.form['QT'])
