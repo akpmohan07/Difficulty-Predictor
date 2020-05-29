@@ -66,6 +66,7 @@ From that we select one of the  ***Classification Algorithm*** called
  - For easy understanding, it is like a ***nested if-else Condition***.
  
 ![loop](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/nested-if-else-flowchart.png?raw=)
+
 Image Describes Nested if-else Loop.
 ### Algorithm
 |  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_1.png?raw=)|  ![](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_2.png?raw=)|
