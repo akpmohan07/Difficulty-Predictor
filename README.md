@@ -44,7 +44,7 @@ For collecting data, first I framed the **Data Rules**.
 
 Finally, I used Google form and google sheet to collect the data.
 Sample Data Rule is here!
-![1](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule_1.png?raw=)
+![1](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule_1.PNG?raw=)
 For more [Details.](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule.PNG)
 ## 2.Model Building
 The model can be defined as ***representation*** of something. The model represents the ***Mathematical relation and Logical relation*** of the Training data.
