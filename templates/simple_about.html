@@ -1,0 +1,191 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Readme.md</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="About_0"></a>About</h1>
+<p class="has-line-data" data-line-start="1" data-line-end="3">This Project was one of the Interview Round by <a href="https://examly.io/">Examly</a>.<br>
+Project Time - <strong><em><code>7 days</code></em></strong></p>
+<h2 class="code-line" data-line-start=3 data-line-end=4><a id="Problem_Statement_3"></a>Problem Statement</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="6">Derive an algorithm to find the difficulty of a question.<br>
+For more <a href="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Campus%20Hiring%20Dev%20Role%20Tasks-1.pdf">Details</a></p>
+<h2 class="code-line" data-line-start=6 data-line-end=7><a id="Task_6"></a>Task</h2>
+<ol>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Data Collection</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">Model Building</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10">UI Development</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11">Deployment</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12">Documentation</li>
+</ol>
+<h2 class="code-line" data-line-start=12 data-line-end=13><a id="Attribute_Description_12"></a>Attribute Description</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question_Type</td>
+<td>Type of the Question</td>
+</tr>
+<tr>
+<td>Question_Difficulty</td>
+<td>Difficuty of the Question</td>
+</tr>
+<tr>
+<td>Attended</td>
+<td>Total number of students Attended</td>
+</tr>
+<tr>
+<td>Time_Taken</td>
+<td>Time is taken by the Student to solve the Question</td>
+</tr>
+<tr>
+<td>Submission</td>
+<td>Number of times student submitted the answer</td>
+</tr>
+<tr>
+<td>Hints_Used</td>
+<td>Number of hints used by the student</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Number of students Correctly answered</td>
+</tr>
+<tr>
+<td>Partial</td>
+<td>Number of students Partially Answered</td>
+</tr>
+<tr>
+<td>Wrong</td>
+<td>Number of students Wrongly Answered</td>
+</tr>
+</tbody>
+</table>
+<h2 class="code-line" data-line-start=25 data-line-end=26><a id="Solution_25"></a>Solution</h2>
+<p class="has-line-data" data-line-start="27" data-line-end="28"><strong><em><code>Difficulty ∝ Time _Taken ,Submission,Hints_Used,Wrong,Partial</code></em></strong></p>
+<p class="has-line-data" data-line-start="29" data-line-end="30"><strong><em><code>Difficulty 1/∝ Right, Partial</code></em></strong></p>
+<p class="has-line-data" data-line-start="31" data-line-end="32">From this, we infer that difficulty level is directly impacted by all the attributes except attended.</p>
+<p class="has-line-data" data-line-start="33" data-line-end="34">Generally, if a question is <strong><em>easy</em></strong> most of the students answer <strong><em>correctly, fastly and accurately</em></strong> and for <strong><em>hard</em></strong> question most of the students answer <strong><em>wrongly, slowly and inaccurately</em></strong>.</p>
+<p class="has-line-data" data-line-start="35" data-line-end="36">With the help of decision-making attribute(<strong><code>Dependent attribute</code></strong>), we can predict the target attribute.</p>
+<h2 class="code-line" data-line-start=37 data-line-end=38><a id="Application_Structure_37"></a>Application Structure</h2>
+<p class="has-line-data" data-line-start="38" data-line-end="39"><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Difficulty_Predictor_Struct.png?raw=" alt="flow"></p>
+<h2 class="code-line" data-line-start=40 data-line-end=41><a id="1Data_Collection_40"></a>1.Data Collection</h2>
+<p class="has-line-data" data-line-start="41" data-line-end="43">For collecting data, first I framed the <strong>Data Rules</strong>.<br>
+<code>Here, Data rules is data about data.</code> It defines the each <strong>attribute type and range based on given Metrics.</strong></p>
+<p class="has-line-data" data-line-start="44" data-line-end="48">Finally, I used Google form and google sheet to collect the data.<br>
+Sample Data Rule is here!<br>
+<img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule_1.PNG?raw=" alt="1"><br>
+For more <a href="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule.PNG">Details.</a></p>
+<h2 class="code-line" data-line-start=48 data-line-end=49><a id="2Model_Building_48"></a>2.Model Building</h2>
+<p class="has-line-data" data-line-start="49" data-line-end="50"><a href="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Notebook/Difficulty_Predict.ipynb"><strong><em>Source Code is Here!</em></strong></a></p>
+<p class="has-line-data" data-line-start="51" data-line-end="52">The model can be defined as <strong><em>representation</em></strong> of something. The model represents the <strong><em>Mathematical relation and Logical relation</em></strong> of the Training data.</p>
+<h3 class="code-line" data-line-start=52 data-line-end=53><a id="1Cleaning_Data_52"></a>1.Cleaning Data</h3>
+<ul>
+<li class="has-line-data" data-line-start="53" data-line-end="55">
+<p class="has-line-data" data-line-start="53" data-line-end="54">Before building the model we need to do some process like <strong><em>Data cleaning, Feature Extraction</em></strong>.</p>
+</li>
+<li class="has-line-data" data-line-start="55" data-line-end="58">
+<p class="has-line-data" data-line-start="55" data-line-end="56">As our data is self-created it does not have any issues. But in our data have <strong><em>Categorical attribute</em></strong>. To handle this, we use <strong>Label encoding Technique</strong> which means assigning a numerical value to the category.</p>
+<pre><code>  [Easy,Medium,Hard] =&gt; [0,1,2]
+</code></pre>
+</li>
+</ul>
+<h3 class="code-line" data-line-start=58 data-line-end=59><a id="2Model_Selection_58"></a>2.Model Selection</h3>
+<p class="has-line-data" data-line-start="59" data-line-end="62">For building the model we use <strong><em><code>Python Scikit-Learn</code></em></strong> Library.<br>
+From that we select one of the <strong><em>Classification Algorithm</em></strong> called<br>
+<strong><em>DecisionTreeClassifier</em></strong>.</p>
+<h3 class="code-line" data-line-start=63 data-line-end=64><a id="DecisionTreeClassifier_63"></a>DecisionTreeClassifier:</h3>
+<ul>
+<li class="has-line-data" data-line-start="64" data-line-end="65">As the name says, it creates the <strong><em>Tree Structure</em></strong> by *** Decision-Making Rule*** as its Node.</li>
+<li class="has-line-data" data-line-start="65" data-line-end="66">Almost every computer engineer should come across this basic <a href="https://www.geeksforgeeks.org/program-to-assign-grades-to-a-student-using-nested-if-else/">question</a>, <strong><em><code>Assign the grade for a student based on their marks!</code></em></strong></li>
+<li class="has-line-data" data-line-start="66" data-line-end="67">The key concept of Decision Tree classifier is the above question. Butt he only thing is it makes <strong><em>decision based on multiple atrribute</em></strong>.</li>
+<li class="has-line-data" data-line-start="67" data-line-end="68">For easy understanding, it is like a <strong><em>nested if-else Condition</em></strong>.</li>
+<li class="has-line-data" data-line-start="68" data-line-end="69"></li>
+</ul>
+<h2 class="code-line" data-line-start=69 data-line-end=71><a id="Image_Describes_Nested_ifelse_Loop_69"></a>Image Describes Nested if-else Loop.</h2>
+<p class="has-line-data" data-line-start="71" data-line-end="72"><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/nested-if-else-flowchart.png?raw=" alt="loop"></p>
+<h2 class="code-line" data-line-start=73 data-line-end=74><a id="Algorithm_73"></a>Algorithm</h2>
+<p class="has-line-data" data-line-start="75" data-line-end="76"><a href="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Notebook/Decision_Tree.ipynb">Source code is here!</a></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_1.png?raw=" alt="enter image description here"></th>
+<th><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_2.png?raw=" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_3.png?raw=" alt="enter image description here"></td>
+<td><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_4.png?raw=" alt="enter image description here"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=80 data-line-end=81><a id="Algorithm_Sample_80"></a>Algorithm Sample:</h2>
+<pre><code>if (Hints_Used&lt;3.5)
+{
+    Class-&gt;Easy
+}
+else 
+{
+    if(wrong&lt;641925)
+    {
+        class-&gt;Medium
+    }
+    else
+    {
+        class-&gt;Hard
+    }   
+}
+</code></pre>
+<h3 class="code-line" data-line-start=98 data-line-end=99><a id="3Creating_Model_and_Testing_98"></a>3.Creating Model and Testing</h3>
+<ul>
+<li class="has-line-data" data-line-start="99" data-line-end="100">The input data is splited into <strong><em>train and test data</em></strong>.</li>
+<li class="has-line-data" data-line-start="100" data-line-end="101">The model is created with training data.</li>
+<li class="has-line-data" data-line-start="101" data-line-end="103">Finally the Model is tested with test data.</li>
+</ul>
+<p class="has-line-data" data-line-start="103" data-line-end="104">The Below graph is an Boundary analysis of Decision Tree Classifier.Ploted as <strong><em>Time_Taken vs Submission</em></strong>.</p>
+<p class="has-line-data" data-line-start="105" data-line-end="106"><img src="https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_boundary_analysis.png?raw=" alt="Analysis"></p>
+<ul>
+<li class="has-line-data" data-line-start="107" data-line-end="108"><img src="https://via.placeholder.com/15/9a21fc/?text=%20" alt="List item"> Easy</li>
+<li class="has-line-data" data-line-start="108" data-line-end="109"><img src="https://via.placeholder.com/15/f3ff4f/?text=%20" alt="enter image description here"> Medium</li>
+<li class="has-line-data" data-line-start="109" data-line-end="111"><img src="https://via.placeholder.com/15/59b7ff/?text=%20" alt="enter image description here"> Hard</li>
+</ul>
+<p class="has-line-data" data-line-start="111" data-line-end="112">From this graph we can conclude that <strong><em>increases in Time_Taken and Submission increases the Difficulty Level</em></strong>.</p>
+<h2 class="code-line" data-line-start=114 data-line-end=115><a id="3UI_Development_114"></a>3.UI Development</h2>
+<p class="has-line-data" data-line-start="115" data-line-end="117">For the UI Development I use <strong><em>Python Flask Framework</em></strong>.<br>
+The input can be in two form,</p>
+<ul>
+<li class="has-line-data" data-line-start="117" data-line-end="118">File as <strong><em>URL</em></strong></li>
+<li class="has-line-data" data-line-start="118" data-line-end="119"><strong><em>Feature</em></strong> as input</li>
+</ul>
+<h2 class="code-line" data-line-start=119 data-line-end=120><a id="4Deloyment_119"></a>4.Deloyment</h2>
+<p class="has-line-data" data-line-start="120" data-line-end="121">For Deployment I used Heroku Cloud Platform.</p>
+<h2 class="code-line" data-line-start=121 data-line-end=122><a id="5Documentation_121"></a>5.Documentation</h2>
+<p class="has-line-data" data-line-start="122" data-line-end="123">The is an Documentation</p>
+<h2 class="code-line" data-line-start=123 data-line-end=124><a id="Technology_Stack_123"></a>Technology Stack</h2>
+<ul>
+<li class="has-line-data" data-line-start="124" data-line-end="125">Python</li>
+<li class="has-line-data" data-line-start="125" data-line-end="126">HTML</li>
+<li class="has-line-data" data-line-start="126" data-line-end="127">CSS</li>
+<li class="has-line-data" data-line-start="127" data-line-end="129">Flask</li>
+</ul>
+<h2 class="code-line" data-line-start=129 data-line-end=130><a id="Library_Used_129"></a>Library Used</h2>
+<ul>
+<li class="has-line-data" data-line-start="130" data-line-end="131">Pandas</li>
+<li class="has-line-data" data-line-start="131" data-line-end="132">Numpy</li>
+<li class="has-line-data" data-line-start="132" data-line-end="133">Scikit-Learn</li>
+<li class="has-line-data" data-line-start="133" data-line-end="134">Pickle</li>
+<li class="has-line-data" data-line-start="134" data-line-end="135">Matplotlib</li>
+</ul>
+<h2 class="code-line" data-line-start=135 data-line-end=136><a id="Tools_Used_135"></a>Tools Used</h2>
+<ul>
+<li class="has-line-data" data-line-start="136" data-line-end="137">Google Colab</li>
+<li class="has-line-data" data-line-start="137" data-line-end="138">Jupyter Notebook</li>
+<li class="has-line-data" data-line-start="138" data-line-end="139">Heroku</li>
+<li class="has-line-data" data-line-start="139" data-line-end="140">Github</li>
+<li class="has-line-data" data-line-start="140" data-line-end="141">Bootstrap</li>
+<li class="has-line-data" data-line-start="141" data-line-end="142">Google Form</li>
+<li class="has-line-data" data-line-start="142" data-line-end="143">Google Sheet</li>
+</ul>
+<pre><code>                         ***Thank You***</code></pre>
+</body></html>

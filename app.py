@@ -1,4 +1,4 @@
-from flask import Flask ,render_template,request 
+from flask import Flask ,render_template,request,send_from_directory
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
@@ -9,6 +9,9 @@ model = pickle.load(open('dtc_model.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/about')
+def about():
+    return render_template('simple_about.html')
 @app.route('/predict',methods=['GET','POST'])
 def predict():
 
