@@ -66,15 +66,36 @@ From that we select one of the  ***Classification Algorithm*** called
  - Almost every computer engineer should come across this basic [question](https://www.geeksforgeeks.org/program-to-assign-grades-to-a-student-using-nested-if-else/), ***`Assign the grade for a student based on their marks!`***
  - The key concept of Decision Tree classifier is the above question. Butt he only thing is it makes ***decision based on multiple atrribute***.
  - For easy understanding, it is like a ***nested if-else Condition***.
- 
+ - 
+ Image Describes Nested if-else Loop.
+---
 ![loop](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/nested-if-else-flowchart.png?raw=)
 
-Image Describes Nested if-else Loop.
-### Algorithm
+## Algorithm
+
 [Source code is here!](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Notebook/Decision_Tree.ipynb)
 |  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_1.png?raw=)|  ![](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_2.png?raw=)|
 |--|--|
 |  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_3.png?raw=)|  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_4.png?raw=)|
+---
+## Algorithm Sample:
+
+    if (Hints_Used<3.5)
+    {
+	    Class->Easy
+    }
+    else 
+    {
+	    if(wrong<641925)
+	    {
+		    class->Medium
+		}
+		else
+		{
+			class->Hard
+		}	
+	}
+
 ### 3.Creating Model and Testing
  - The input data is splited into ***train and test data***.
  - The model is created with training data.
