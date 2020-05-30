@@ -71,6 +71,7 @@ From that we select one of the  ***Classification Algorithm*** called
 
 Image Describes Nested if-else Loop.
 ### Algorithm
+[Source code is here!](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Notebook/Decision_Tree.ipynb)
 |  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_1.png?raw=)|  ![](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_2.png?raw=)|
 |--|--|
 |  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_3.png?raw=)|  ![enter image description here](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_4.png?raw=)|
@@ -100,10 +101,11 @@ The input can be in two form,
 ## 5.Documentation
 The is an Documentation
 ## Technology Stack
+ -  Python
  - HTML
  - CSS
- - Python
  - Flask
+ 
 ## Library Used
  - Pandas
  - Numpy
@@ -111,10 +113,13 @@ The is an Documentation
  - Pickle
  - Matplotlib
 ## Tools Used
- - Google Form
- - Google Sheet
  - Google Colab
  - Jupyter Notebook
  - Heroku
+ - Github
+ - Bootstrap
+ - Google Form
+ - Google Sheet
+
 
                              ***Thank You***
