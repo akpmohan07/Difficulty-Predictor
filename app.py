@@ -25,7 +25,7 @@ def predict():
         data = data.drop('Question_Type',axis = 'columns')
         le = LabelEncoder() 
         label = le.fit_transform(['Easy','Medium','Hard'])
-        try:
+        try:#If the  file had target attribute it is dropped
             x = data.drop('Question_Difficulty',axis = 1)
         except:
             x = data
