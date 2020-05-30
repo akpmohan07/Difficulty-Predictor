@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Home</title>
 </head>
 <body>
     <a href="https://github.com/akpmohan07/Difficulty-Predictor" target="_blank"><h1 style="float: right; color: black;">Github</h1></a>
 
+    <div class="center">
+        <div class="center">
+    <textarea readonly id="mytextarea" value="https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv" wrap="off" style="overflow:auto">https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv</textarea>
+    <button  style="float: left; ;"class="btn btn-primary" onclick="myFunction()">Copy File URL</button>
+
+    <button style="float: right;" class="btn btn-primary" onclick="window.open('https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Data/Test_Data.csv')" >View File</button>
+</div></div>
     <div class="center"  >
-    <form action="{{ url_for('predict')}}" method="post" action="">
+    <form  action="{{ url_for('predict')}}" method="post" action="">
         <div class="center">
         <label for="url">URL</label>
         <input type="url" name="url" placeholder="File URL"  > 
-        <button type="submit" name="action" value="file">Predict</button>
+        <button style="float: none;" class="btn btn-primary" type="submit" name="action" value="file">Predict</button>
         </div>
         <h1 style="text-align: center;">OR</h1>
         <br>
@@ -40,9 +49,27 @@
         <input type="number" name="P" placeholder="Partial"><br>
         <label for="W">Wrong</label>
         <input type="number" name="W" placeholder="Wrong"><br>
-        <button type="submit" name="action" value="form">Predict</button>
+        <button class="btn btn-primary" type="submit" name="action" value="form">Predict</button>
     </div>
     </form>
     </div>
+
+
+
+    <script>
+        function myFunction() {
+          var copyText = document.getElementById("mytextarea");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
+
+
 </html>
