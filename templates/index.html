@@ -9,21 +9,37 @@
     <title>Home</title>
 </head>
 <body>
-    <a href="https://github.com/akpmohan07/Difficulty-Predictor" target="_blank"><h1 style="float: right; color: black;">Github</h1></a>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        For Better Experience use <strong>Desktop Mode:)</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <a href="https://github.com/akpmohan07/Difficulty-Predictor" target="_blank" style="float: right; margin: 40px 60px 0 0;" class="badge badge-dark"><h1>Github</h1></a>
+    
+      <br>
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Question Difficulty Predictor</h1>
+          <p>Copy Paste the link or give input to Predict the Difficulty Level of the Question.</p>
+        </div>
+       
+      </div>
 
     <div class="center">
-        <div class="center">
-    <textarea readonly id="mytextarea" value="https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv" wrap="off" style="overflow:auto">https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv</textarea>
+        
+    <textarea readonly id="mytextarea" value="https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv" wrap="off" style="overflow:auto; margin-left: 10%;">https://raw.githubusercontent.com/akpmohan07/Difficulty-Predictor/master/static/Data/Test_Data.csv</textarea>
     <button  style="float: left; ;"class="btn btn-primary" onclick="myFunction()">Copy File URL</button>
 
     <button style="float: right;" class="btn btn-primary" onclick="window.open('https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Data/Test_Data.csv')" >View File</button>
-</div></div>
+</div>
+        <br>
     <div class="center"  >
     <form  action="{{ url_for('predict')}}" method="post" action="">
         <div class="center">
         <label for="url">URL</label>
         <input type="url" name="url" placeholder="File URL"  > 
-        <button style="float: none;" class="btn btn-primary" type="submit" name="action" value="file">Predict</button>
+        <button style="margin-left: 50%;" class="btn btn-primary" type="submit" name="action" value="file">Predict</button>
         </div>
         <h1 style="text-align: center;">OR</h1>
         <br>
@@ -49,12 +65,16 @@
         <input type="number" name="P" placeholder="Partial"><br>
         <label for="W">Wrong</label>
         <input type="number" name="W" placeholder="Wrong"><br>
-        <button class="btn btn-primary" type="submit" name="action" value="form">Predict</button>
+        <button style="margin-left: 50%;" class="btn btn-primary" type="submit" name="action" value="form">Predict</button>
     </div>
     </form>
     </div>
 
 
+    <br>
+    <div class="footer">
+        <a href="https://github.com/akpmohan07" target="_">akpmohan </a><p>- 2020</p>
+    </div>
 
     <script>
         function myFunction() {
