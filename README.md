@@ -40,7 +40,7 @@ With the help of decision-making attribute(**`Dependent attribute `**), we can p
 
 ## 1.Data Collection
 For collecting data, first I framed the **Data Rules**.
-`Here, Data rules is data about data.` It defines the each **attribute type and range.**
+`Here, Data rules is data about data.` It defines the each **attribute type and range based on given Metrics from the given given metrics.**
 
 Finally, I used Google form and google sheet to collect the data.
 Sample Data Rule is here!
