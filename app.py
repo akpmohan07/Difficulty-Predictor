@@ -5,25 +5,25 @@ from sklearn.tree import DecisionTreeClassifier
 import pickle
 import pandas as pd
 app = Flask(__name__)
-model = pickle.load(open('dtc_model.pkl', 'rb'))
-@app.route('/')
+model = pickle.load(open('dtc_model.pkl', 'rb')) #Loading the Model from pickle file
+@app.route('/') #Home Page
 def home():
     return render_template('index.html')
 @app.route('/about')
-def about():
+def about(): #About
     return render_template('simple_about.html')
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['GET','POST']) #Predict
 def predict():
 
-    if request.form['action'] == 'file':
-        url = request.form['url']
-        data = pd.read_csv(url)
+    if request.form['action'] == 'file':# File as input
+        url = request.form['url'] #Getting URL
+        data = pd.read_csv(url) #Loading data from URL
         backup = data
-        data = data.drop('Attended',axis=1)
-        dummy = pd.get_dummies(data.Question_Type)
+        data = data.drop('Attended',axis=1) 
+        dummy = pd.get_dummies(data.Question_Type) #Handling Categorical Data
         data = pd.concat([data,dummy],axis='columns')
         data = data.drop('Question_Type',axis = 'columns')
-        le = LabelEncoder()
+        le = LabelEncoder() 
         label = le.fit_transform(['Easy','Medium','Hard'])
         try:
             x = data.drop('Question_Difficulty',axis = 1)
@@ -37,20 +37,20 @@ def predict():
         # score = dtc.score(test,test_label)
         #print(x)
         #score = model.score(x,y)
-        pre = model.predict(x)
-        pr = list(le.inverse_transform(pre))
+        pre = model.predict(x) #Predicting
+        pr = list(le.inverse_transform(pre)) #inverse Labelling
         backup['Predicted'] = pr
         return render_template('predict.html',url = url,tables=[backup.to_html(classes='data')],titles=backup.columns.values)
-    elif request.form['action'] == 'form':
+    elif request.form['action'] == 'form': #If Feature as input
         data = []
-        data.append(request.form['QT'])
+        data.append(request.form['QT']) #Getting form data
         data.append(request.form['TT'])
         data.append(request.form['S'])
         data.append(request.form['HU'])
         data.append(request.form['R'])
         data.append(request.form['P'])
         data.append(request.form['W'])
-        if data[0] == 'MCQ':
+        if data[0] == 'MCQ':    #Handing Categorical data
             data.extend([0,1,0,0])
         elif data[0] == 'FillUp':
             data.extend([1,0,0,0])
@@ -61,8 +61,8 @@ def predict():
         del data[0]
         data = list(map(int,data))
         print(data)
-        pred = model.predict([data])
-        if pred==0:
+        pred = model.predict([data]) #predicting
+        if pred==0: #Reverse Labelling
             diff = "Easy"
         elif pred==1:
             diff = "Hard"
