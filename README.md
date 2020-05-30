@@ -31,7 +31,7 @@ For more [Details](https://github.com/akpmohan07/Difficulty-Predictor/blob/maste
 
 From this, we infer that difficulty level is directly impacted by all the attributes except attended.
 
-Generally, if a question is ***easy*** most of the students answered ***correctly, fastly and accurately*** and for ***hard*** question most of the students answered  ***wrongly, slowly and inaccurately***.
+Generally, if a question is ***easy*** most of the students answer ***correctly, fastly and accurately*** and for ***hard*** question most of the students answer  ***wrongly, slowly and inaccurately***.
 
 With the help of decision-making attribute(**`Dependent attribute `**), we can predict the target attribute.
 
@@ -47,6 +47,8 @@ Sample Data Rule is here!
 ![1](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule_1.PNG?raw=)
 For more [Details.](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Data_Rule.PNG)
 ## 2.Model Building
+[***Source Code is Here!***](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Notebook/Difficulty_Predict.ipynb)
+
 The model can be defined as ***representation*** of something. The model represents the ***Mathematical relation and Logical relation*** of the Training data.
 ### 1.Cleaning Data
 - Before building the model we need to do some process like ***Data cleaning, Feature Extraction***.
@@ -76,6 +78,17 @@ Image Describes Nested if-else Loop.
  - The input data is splited into ***train and test data***.
  - The model is created with training data.
  - Finally the Model is tested with test data.
+ 
+The Below graph is an Boundary analysis of Decision Tree Classifier.Ploted as ***Time_Taken vs Submission***.
+
+![Analysis](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/dtc_boundary_analysis.png?raw=)
+
+ - ![List item](https://via.placeholder.com/15/9a21fc/?text=%20) Easy
+ - ![enter image description here](https://via.placeholder.com/15/f3ff4f/?text=%20) Medium
+ - ![enter image description here](https://via.placeholder.com/15/59b7ff/?text=%20) Hard
+
+From this graph we can conclude that  ***increases in Time_Taken and Submission increases  the Difficulty Level***.
+ 
  
  ## 3.UI Development
 For the UI Development I use ***Python Flask Framework***.
