@@ -35,7 +35,7 @@ Generally, if a question is ***easy*** most of the students answer ***correctly,
 
 With the help of decision-making attribute(**`Dependent attribute `**), we can predict the target attribute.
 
-## Flow chart
+## Application Structure
 ![flow](https://github.com/akpmohan07/Difficulty-Predictor/blob/master/static/Readme%20Files/Difficulty_Predictor_Struct.png?raw=)
 
 ## 1.Data Collection
